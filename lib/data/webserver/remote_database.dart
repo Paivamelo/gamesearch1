@@ -10,7 +10,7 @@ class DatabaseRemoteServer {
   DatabaseRemoteServer._createInstance(); //construtor
 
   //String dataBaseUrl = "http://192.168.100.70:3000/notes";
-  String dataBaseUrl = "https://si700-gamesearch.herokuapp.com/notes";
+  String dataBaseUrl = "https://si700-gamesearch.herokuapp.com/users";
 
   Dio _dio = Dio();
 
