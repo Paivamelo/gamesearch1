@@ -1,61 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gamesearch1/logic/manage_db/manage_remote_db_bloc.dart';
-import 'package:gamesearch1/view/loginweb.dart';
-import 'package:gamesearch1/view/user_list.dart';
-import 'logic/monitor_db/monitor_db_bloc.dart';
+import 'package:gamesearch1/view/bottom_navigation_bar.dart';
+import 'package:gamesearch1/view/splash.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(home: Splash()));
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  var _currentPage = 0;
-
-  var _pages = [TelaLogin1(), UserList()];
-
+class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.pink),
-      home: MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (_) => MonitorBloc()),
-          BlocProvider(create: (_) => ManageremoteBloc())
-        ],
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              "GameSearch",
-              style: TextStyle(fontFamily: 'Play', fontSize: 30),
-            ),
-          ),
-          body: _pages[_currentPage],
-          bottomNavigationBar: BottomNavigationBar(
-            items: [
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.account_circle), label: "Login Web"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.account_circle), label: "Usuário"),
-            ],
-            backgroundColor: Colors.pink,
-            unselectedItemColor: Colors.white,
-            fixedColor: Colors.black,
-            currentIndex: _currentPage,
-            onTap: (int index) {
-              setState(() {
-                _currentPage = index;
-              });
-            },
-          ),
-        ),
-      ),
-    );
+    return MyBottomNavigationBar();
   }
 }
