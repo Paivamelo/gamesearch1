@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "539445379546",
+    "project_id": "gamesearch-12cb7",
+    "storage_bucket": "gamesearch-12cb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539445379546:android:a261a01c5752e0061880e3",
+        "android_client_info": {
+          "package_name": "br.unicamp.gamesearch1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539445379546-oo22hcj8bo4uqk2pcdl2pisbch07csjl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5TIPphdZow5lcBATXOdmYSKNgtGFYFHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539445379546-oo22hcj8bo4uqk2pcdl2pisbch07csjl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
