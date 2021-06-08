@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/games.dart';
-import '../view/tela2/aboutgame.dart';
+import '../view/screens/game_screen/aboutgame.dart';
 
 class GameList extends StatelessWidget {
   final int index;

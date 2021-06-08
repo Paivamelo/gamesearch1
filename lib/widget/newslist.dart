@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/news.dart';
-import '../view/tela3/infonews.dart';
+import '../view/screens/news_screen/infonews.dart';
 
 class NewsList extends StatelessWidget {
   final int index;

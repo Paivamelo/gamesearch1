@@ -342,22 +342,6 @@ class SignupPageState extends State<SignupPage> {
             SizedBox(
               height: 10,
             ),
-            Container(
-              height: 40,
-              alignment: Alignment.center,
-              child: TextButton(
-                //autofocus: true,
-                child: Text(
-                  "Cancelar",
-                  style: TextStyle(
-                    fontFamily: 'Gameover',
-                    fontSize: 45,
-                    color: Colors.black87,
-                  ),
-                ),
-                onPressed: () => Navigator.pop(context, false),
-              ),
-            ),
           ],
         ),
       ),
