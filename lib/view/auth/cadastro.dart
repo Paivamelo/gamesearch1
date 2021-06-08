@@ -344,6 +344,53 @@ class SignupPageState extends State<SignupPage> {
                 ),
               ),
             ),
+<<<<<<< HEAD:lib/view/cadastro.dart
+=======
+            Container(
+              height: 60,
+              alignment: Alignment.centerLeft,
+              decoration: BoxDecoration(
+                color: Colors.pink[400],
+                borderRadius: BorderRadius.all(
+                  Radius.circular(8),
+                ),
+              ),
+              child: SizedBox.expand(
+                child: ElevatedButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "CADASTRAR",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontFamily: "Play",
+                          fontSize: 26,
+                          letterSpacing: 4,
+                        ),
+                      ),
+                    ],
+                  ),
+                  onPressed: () {
+                    final snackBar = SnackBar(
+                      content: Text("Cadastro Realizado!"),
+                      action: SnackBarAction(
+                        label: 'Undo',
+                        onPressed: () {
+                          // Some code to undo the change.
+                        },
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+>>>>>>> 5d5d97723ae03a4a55c106ab31ba015cb4cea5b4:lib/view/auth/cadastro.dart
           ],
         ),
       ),
