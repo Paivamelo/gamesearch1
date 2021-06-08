@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_bloc.dart';
+import 'package:gamesearch1/view/screens/game_screen/aboutgame.dart';
+import 'package:gamesearch1/view/screens/news_screen/infonews.dart';
 import 'package:gamesearch1/view/wrapper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 //import 'package:gamesearch1/view/splash.dart';
@@ -18,12 +20,17 @@ class Launcher extends StatelessWidget {
     return BlocProvider<AuthBloc>(
       create: (context) => AuthBloc(),
       child: MaterialApp(
-          title: 'Gamesearch',
-          theme: ThemeData(
-            primarySwatch: Colors.pink,
-            visualDensity: VisualDensity.adaptivePlatformDensity,
-          ),
-          home: Wrapper()),
+        title: 'Gamesearch',
+        theme: ThemeData(
+          primarySwatch: Colors.pink,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: Wrapper(),
+        routes: {
+          AboutGame.routeName: (ctx) => AboutGame(),
+          InfoNews.routeName: (ctx) => InfoNews(),
+        },
+      ),
     );
   }
 }
