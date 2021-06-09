@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gamesearch1/logic/manage_auth/auth_bloc.dart';
+import 'package:gamesearch1/logic/manage_auth/auth_event.dart';
 
 class SignupPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    return SignupPageState();
-  }
+  _SignupPageState createState() => _SignupPageState();
 }
 
-class SignupPageState extends State<SignupPage> {
-  GlobalKey<FormState> formKey = new GlobalKey<FormState>();
+class _SignupPageState extends State<SignupPage> {
+  @override
+  Widget build(BuildContext context) {
+    return registerForm();
+  }
+
+  final GlobalKey<FormState> formKey = new GlobalKey<FormState>();
 
   final GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey =
       GlobalKey<ScaffoldMessengerState>();
@@ -20,7 +26,9 @@ class SignupPageState extends State<SignupPage> {
   bool switchValue1 = false;
   bool switchValue2 = false;
 
-  Widget build(BuildContext context) {
+  Widget registerForm() {
+    final GlobalKey<FormState> formKey = new GlobalKey<FormState>();
+    final RegisterUser registerData = new RegisterUser();
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(
@@ -31,40 +39,6 @@ class SignupPageState extends State<SignupPage> {
         color: Colors.white,
         child: ListView(
           children: <Widget>[
-            Container(
-              width: 200,
-              height: 200,
-              alignment: Alignment(0.0, 1.20),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage("assets/images/avatar.png"),
-                ),
-              ),
-              child: Container(
-                height: 56,
-                width: 56,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: Colors.pink[400],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(56),
-                  ),
-                ),
-                child: SizedBox.expand(
-                  child: TextButton(
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
             SizedBox(
               height: 20,
             ),
@@ -85,6 +59,9 @@ class SignupPageState extends State<SignupPage> {
                           fontFamily: 'Gameover',
                         ),
                       ),
+                      /* onSaved: (String invalue) {
+                        registerData.email = invalue;
+                      },*/
                     ),
                     SizedBox(
                       height: 10,
@@ -101,6 +78,9 @@ class SignupPageState extends State<SignupPage> {
                           fontFamily: 'Gameover',
                         ),
                       ),
+                      onSaved: (String invalue) {
+                        registerData.email = invalue;
+                      },
                     ),
                     SizedBox(
                       height: 10,
@@ -118,6 +98,9 @@ class SignupPageState extends State<SignupPage> {
                           fontFamily: 'Gameover',
                         ),
                       ),
+                      onSaved: (String invalue) {
+                        registerData.senha = invalue;
+                      },
                     ),
                     SizedBox(
                       height: 20,
@@ -126,6 +109,7 @@ class SignupPageState extends State<SignupPage> {
                       height: 20,
                     ),
                     Container(
+                      alignment: Alignment.centerLeft,
                       child: Text(
                         "Selecione seus gêneros preferidos:",
                         style: TextStyle(
@@ -162,10 +146,10 @@ class SignupPageState extends State<SignupPage> {
                           ),
                         ),
                         Checkbox(
-                          value: checkBoxValue,
+                          value: checkBoxValue1,
                           onChanged: (bool value) {
                             setState(() {
-                              checkBoxValue = value;
+                              checkBoxValue1 = value;
                             });
                           },
                         ),
@@ -306,6 +290,11 @@ class SignupPageState extends State<SignupPage> {
                             ],
                           ),
                           onPressed: () {
+                            if (formKey.currentState.validate()) {
+                              formKey.currentState.save();
+                              BlocProvider.of<AuthBloc>(context)
+                                  .add(registerData);
+                            }
                             final snackBar = SnackBar(
                               content: Text("Cadastro Realizado!"),
                               action: SnackBarAction(
@@ -323,22 +312,6 @@ class SignupPageState extends State<SignupPage> {
                     ),
                     SizedBox(
                       height: 10,
-                    ),
-                    Container(
-                      height: 40,
-                      alignment: Alignment.center,
-                      child: TextButton(
-                        //autofocus: true,
-                        child: Text(
-                          "Cancelar",
-                          style: TextStyle(
-                            fontFamily: 'Gameover',
-                            fontSize: 45,
-                            color: Colors.black87,
-                          ),
-                        ),
-                        onPressed: () => Navigator.pop(context, false),
-                      ),
                     ),
                   ],
                 ),
