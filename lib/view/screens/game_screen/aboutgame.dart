@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutGame extends StatelessWidget {
   static const routeName = '/aboutgame';
@@ -123,7 +124,8 @@ class AboutGame extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      launch('https://www.youtube.com/watch?v=NSJ4cESNQfE'),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   ),
