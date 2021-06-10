@@ -27,41 +27,39 @@ class MainTela4 extends StatelessWidget {
               child: ListView(children: [
                 header(),
                 SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 emailFormField(user),
-                senhaFormField(user),
-                recuperarSenha(),
                 SizedBox(
-                  height: 20,
+                  height: 10,
+                ),
+                senhaFormField(user),
+                SizedBox(
+                  height: 50,
                 ),
                 submitButton(user, state, context),
-                SizedBox(
-                  height: 20,
-                ),
-                cadastrarButton(),
               ])));
     });
   }
 
   Widget header() {
     return Container(
-        width: 200,
-        height: 200,
+        width: 180,
+        height: 180,
         decoration: BoxDecoration(
             shape: BoxShape.circle,
-            image:
-                DecorationImage(image: AssetImage('assets/images/game.png'))));
+            image: DecorationImage(
+                image: AssetImage('assets/images/feedback.png'))));
   }
 
   Widget emailFormField(User user) {
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: TextInputType.multiline,
         initialValue: user.email,
         decoration: InputDecoration(
-            labelText: "Email",
+            labelText: "Assunto",
             labelStyle: TextStyle(
               fontSize: 20,
               fontFamily: 'Play',
@@ -70,7 +68,7 @@ class MainTela4 extends StatelessWidget {
                 OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
         validator: (value) {
           if (value.length == 0) {
-            return "Digite o seu email";
+            return "Assunto obrigatório";
           }
           return null;
         },
@@ -85,10 +83,12 @@ class MainTela4 extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(
-        obscureText: true,
+        minLines: 4, //Normal textInputField will be displayed
+        maxLines: 6,
         initialValue: user.senha,
         decoration: InputDecoration(
-            labelText: "Senha",
+            alignLabelWithHint: true,
+            labelText: "Escreva seu feedback",
             labelStyle: TextStyle(
               fontSize: 20,
               fontFamily: 'Play',
@@ -97,7 +97,7 @@ class MainTela4 extends StatelessWidget {
                 OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
         validator: (value) {
           if (value.length == 0) {
-            return "Digite a sua senha";
+            return "Feedback obrigatório";
           }
           return null;
         },
@@ -110,16 +110,16 @@ class MainTela4 extends StatelessWidget {
 
   Widget submitButton(User user, state, context) {
     return Container(
-      height: 60,
+      height: 40,
       child: ElevatedButton(
           child: Text(
-            "LOGIN",
+            "ENVIAR FEEDBACK",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontFamily: "Play",
-              fontSize: 26,
-              letterSpacing: 4,
+              fontFamily: "Gameover",
+              fontSize: 45,
+              letterSpacing: 3,
             ),
           ),
           onPressed: () {
@@ -129,44 +129,6 @@ class MainTela4 extends StatelessWidget {
                   .add(SubmitEvent(user: user));
             }
           }),
-    );
-  }
-
-  Widget recuperarSenha() {
-    return Container(
-      height: 40,
-      alignment: Alignment.centerRight,
-      child: TextButton(
-        //autofocus: true,
-        child: Text(
-          "Recuperar Senha",
-          style: TextStyle(
-            fontFamily: 'Gameover',
-            fontSize: 38,
-            color: Colors.black87,
-          ),
-        ),
-        onPressed: () {},
-      ),
-    );
-  }
-
-  Widget cadastrarButton() {
-    return Container(
-      height: 40,
-      alignment: Alignment.center,
-      child: TextButton(
-        //autofocus: true,
-        child: Text(
-          "Cadastrar-se",
-          style: TextStyle(
-            fontFamily: 'Gameover',
-            fontSize: 50,
-            color: Colors.black87,
-          ),
-        ),
-        onPressed: () {},
-      ),
     );
   }
 }
