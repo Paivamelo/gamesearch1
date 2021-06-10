@@ -44,6 +44,7 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.feedback), label: "Feedback")
           ],
+          type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.pink,
           unselectedItemColor: Colors.white,
           fixedColor: Colors.black,
