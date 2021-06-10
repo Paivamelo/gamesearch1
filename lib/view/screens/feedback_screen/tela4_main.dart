@@ -27,11 +27,11 @@ class MainTela4 extends StatelessWidget {
               child: ListView(children: [
                 header(),
                 SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
                 emailFormField(user),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 senhaFormField(user),
                 SizedBox(
