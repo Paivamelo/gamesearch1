@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_bloc.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_event.dart';
+import 'package:gamesearch1/view/resetpassword.dart';
 
 class TelaLogin extends StatefulWidget {
   @override
@@ -149,7 +150,8 @@ class _TelaLoginState extends State<TelaLogin> {
             color: Colors.black87,
           ),
         ),
-        onPressed: () {},
+        onPressed: () => Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => Telareset())),
       ),
     );
   }

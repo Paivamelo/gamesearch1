@@ -12,6 +12,10 @@ class LoginUser extends AuthEvent {
   String senha;
 }
 
+class ResetPassword extends AuthEvent {
+  String email;
+}
+
 class LoginAnonymousUser extends AuthEvent {}
 
 class Logout extends AuthEvent {}
