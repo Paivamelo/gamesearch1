@@ -4,6 +4,8 @@ import 'package:gamesearch1/logic/manage_auth/auth_bloc.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_event.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import 'auth/authentication_screen.dart';
+
 class Telareset extends StatefulWidget {
   @override
   _TelaresetState createState() => _TelaresetState();
@@ -86,10 +88,39 @@ class _TelaresetState extends State<Telareset> {
                           if (formKey.currentState.validate()) {
                             formKey.currentState.save();
                             BlocProvider.of<AuthBloc>(context).add(resetEmail);
+                            final snackBar = SnackBar(
+                              content: Text("Email Enviado!"),
+                              action: SnackBarAction(
+                                label: 'OK',
+                                onPressed: () {
+                                  // Some code to undo the change.
+                                },
+                              ),
+                            );
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
                           }
                           auth.sendPasswordResetEmail(email: resetEmail.email);
                         }),
                   ),
+                  Container(
+                    height: 40,
+                    alignment: Alignment.center,
+                    child: TextButton(
+                      //autofocus: true,
+                      child: Text(
+                        "Voltar",
+                        style: TextStyle(
+                          fontFamily: 'Gameover',
+                          fontSize: 50,
+                          color: Colors.black87,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  )
                 ]))));
   }
 
