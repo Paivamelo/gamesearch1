@@ -10,7 +10,7 @@ class ManageRemoteBloc extends Bloc<ManageEvent, ManageState> {
   Stream<ManageState> mapEventToState(ManageEvent event) async* {
     if (event is SubmitEvent) {
       if (state is InsertState) {
-        DatabaseRemoteServer.helper.insertFeedback(event.feedback);
+        DatabaseRemoteServer.helper.insertNote(event.feedback);
       }
     }
   }

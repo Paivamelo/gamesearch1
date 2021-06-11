@@ -4,8 +4,6 @@ import 'package:gamesearch1/logic/manage_auth/auth_bloc.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_event.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'auth/authentication_screen.dart';
-
 class Telareset extends StatefulWidget {
   @override
   _TelaresetState createState() => _TelaresetState();

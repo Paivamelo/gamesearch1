@@ -1,20 +1,23 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:dio/dio.dart';
+import 'dart:io';
+
 import 'package:gamesearch1/model/feedback.dart';
+import 'package:dio/dio.dart';
 import 'package:socket_io_client/socket_io_client.dart';
 
 class DatabaseRemoteServer {
-  static DatabaseRemoteServer helper = DatabaseRemoteServer
-      ._createInstance(); //objeto que auxilia a conexao com o bd
-  DatabaseRemoteServer._createInstance(); //construtor
-
-  String dataBaseUrl = "https://si700-gamesearch.herokuapp.com/feedbacks";
+  /* 
+    Criando singleton
+  */
+  static DatabaseRemoteServer helper = DatabaseRemoteServer._createInstance();
+  DatabaseRemoteServer._createInstance();
+  String databaseUrl = "https://si700-gamesearch.herokuapp.com/feedbacks";
 
   Dio _dio = Dio();
 
   Future<List<dynamic>> getFeedbackList() async {
-    Response response = await _dio.request(this.dataBaseUrl,
+    Response response = await _dio.request(this.databaseUrl,
         options: Options(method: "GET", headers: {
           "Accept": "application/json",
         }));
@@ -30,8 +33,8 @@ class DatabaseRemoteServer {
     return [feedbackList, idList];
   }
 
-  Future<int> insertFeedback(UserFeedback feedback) async {
-    await _dio.post(this.dataBaseUrl,
+  Future<int> insertNote(UserFeedback feedback) async {
+    await _dio.post(this.databaseUrl,
         options: Options(headers: {"Accept": "application/json"}),
         data: jsonEncode({
           "assunto": feedback.assunto,
@@ -40,7 +43,9 @@ class DatabaseRemoteServer {
     return 1;
   }
 
-//Stream
+  /*
+    STREAM
+  */
   notify() async {
     if (_controller != null) {
       var response = await getFeedbackList();
@@ -50,13 +55,13 @@ class DatabaseRemoteServer {
 
   Stream get stream {
     if (_controller == null) {
-      _controller = StreamController();
+      _controller = StreamController.broadcast();
 
       Socket socket = io(
-          //"http://192.168.100.70:3000",
+          //http://192.168.15.14:3000",
           "https://si700-gamesearch.herokuapp.com/",
-          OptionBuilder().setTransports(['websocket']).build());
-
+          OptionBuilder().setTransports(['websocket']) // for Flutter or Dart VM
+              .build());
       socket.on('invalidate', (_) => notify());
     }
     return _controller.stream.asBroadcastStream();
@@ -74,6 +79,6 @@ class DatabaseRemoteServer {
 
 void main() async {
   UserFeedback feedback = UserFeedback();
-  feedback.assunto = "Victor@";
-  feedback.feedbacktext = "123";
+  feedback.assunto = "Assunto Teste";
+  feedback.feedbacktext = "Feedback";
 }

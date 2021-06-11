@@ -2,11 +2,19 @@ import 'package:gamesearch1/model/feedback.dart';
 
 abstract class ManageEvent {}
 
-//para remover algo, basta saber a id do que deve ser removido
 class DeleteEvent extends ManageEvent {
-  int userId;
-  DeleteEvent({this.userId});
+  var noteId;
+  DeleteEvent({this.noteId});
 }
+
+class UpdateRequest extends ManageEvent {
+  var noteId;
+  UserFeedback previousNote;
+
+  UpdateRequest({this.noteId, this.previousNote});
+}
+
+class UpdateCancel extends ManageEvent {}
 
 class SubmitEvent extends ManageEvent {
   UserFeedback feedback;

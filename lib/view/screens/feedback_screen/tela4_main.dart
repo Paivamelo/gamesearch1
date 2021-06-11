@@ -15,7 +15,6 @@ class MainTela4<T extends Bloc<ManageEvent, ManageState>>
         builder: (context, state) {
       UserFeedback feedback;
       feedback = new UserFeedback();
-
       return Form(
           key: formKey,
           child: Container(
@@ -57,8 +56,6 @@ class MainTela4<T extends Bloc<ManageEvent, ManageState>>
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(
-        keyboardType: TextInputType.multiline,
-        initialValue: feedback.assunto,
         decoration: InputDecoration(
             labelText: "Assunto",
             labelStyle: TextStyle(
@@ -84,9 +81,6 @@ class MainTela4<T extends Bloc<ManageEvent, ManageState>>
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(
-        minLines: 4, //Normal textInputField will be displayed
-        maxLines: 6,
-        initialValue: feedback.feedbacktext,
         decoration: InputDecoration(
             alignLabelWithHint: true,
             labelText: "Escreva seu feedback",
