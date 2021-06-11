@@ -1,36 +1,36 @@
-class User {
-  String _email;
-  String _senha;
+class UserFeedback {
+  String _assunto;
+  String _feedbacktext;
 
-  User() {
-    _email = "";
-    _senha = "";
+  UserFeedback() {
+    _assunto = "";
+    _feedbacktext = "";
   }
 
-  User.fromMap(map) {
-    this._email = map["email"];
-    this._senha = map["senha"];
+  UserFeedback.fromMap(map) {
+    this._assunto = map["assunto"];
+    this._feedbacktext = map["feedbacktext"];
   }
 
-  String get email => _email;
-  String get senha => _senha;
+  String get assunto => _assunto;
+  String get feedbacktext => _feedbacktext;
 
-  set email(String newEmail) {
-    if (newEmail.length > 0) {
-      this._email = newEmail;
+  set assunto(String newAssunto) {
+    if (newAssunto.length > 0) {
+      this._assunto = newAssunto;
     }
   }
 
-  set senha(String newSenha) {
-    if (newSenha.length > 0) {
-      this._senha = newSenha;
+  set feedbacktext(String newFeedbackText) {
+    if (newFeedbackText.length > 0) {
+      this._feedbacktext = newFeedbackText;
     }
   }
 
   toMap() {
     var map = Map<String, dynamic>();
-    map["email"] = _email;
-    map["senha"] = _senha;
+    map["assunto"] = _assunto;
+    map["feedbacktext"] = _feedbacktext;
     return map;
   }
 }

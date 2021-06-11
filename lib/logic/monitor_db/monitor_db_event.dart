@@ -5,7 +5,7 @@ abstract class MonitorEvent {}
 class AskNewList extends MonitorEvent {}
 
 class UpdateList extends MonitorEvent {
-  List<User> userList;
+  List<UserFeedback> feedbackList;
   List<int> idList;
-  UpdateList({this.userList, this.idList});
+  UpdateList({this.feedbackList, this.idList});
 }

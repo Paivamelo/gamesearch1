@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     MainTela1(),
     MainTela2(),
     MainTela3(),
-    MainTela4(),
+    MainTela4<ManageRemoteBloc>(),
   ];
 
   @override
@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => MonitorBloc()),
-        BlocProvider(create: (_) => ManageRemoteBloc())
+        BlocProvider(create: (_) => ManageRemoteBloc()),
       ],
       child: Scaffold(
         body: _pages[_currentPage],

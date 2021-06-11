@@ -7,20 +7,19 @@ import 'package:bloc/bloc.dart';
 
 class MonitorBloc extends Bloc<MonitorEvent, MonitorState> {
   StreamSubscription _remoteSubscription;
-
-  List<User> remoteUserList;
+  List<UserFeedback> remoteFeedbackList;
   List<int> remoteIdList;
 
-  MonitorBloc() : super(MonitorState(userList: [], idList: [])) {
+  MonitorBloc() : super(MonitorState(feedbackList: [], idList: [])) {
     add(AskNewList());
 
     _remoteSubscription = DatabaseRemoteServer.helper.stream.listen((response) {
       try {
-        remoteUserList = response[0];
+        remoteFeedbackList = response[0];
         remoteIdList = response[1];
         add(UpdateList(
-            userList: List.from(remoteUserList)..addAll(remoteUserList),
-            idList: List.from(remoteUserList)..addAll(remoteIdList)));
+            feedbackList: List.from(remoteFeedbackList),
+            idList: List.from(remoteIdList)));
       } catch (e) {}
     });
   }
@@ -29,11 +28,13 @@ class MonitorBloc extends Bloc<MonitorEvent, MonitorState> {
   Stream<MonitorState> mapEventToState(MonitorEvent event) async* {
     if (event is AskNewList) {
       //alguem esta pedindo uma lista
-      var remoteResponse = await DatabaseRemoteServer.helper.getUserList();
+      var remoteResponse = await DatabaseRemoteServer.helper.getFeedbackList();
       yield MonitorState(
-          userList: List.from(remoteUserList), idList: List.from(remoteIdList));
+          feedbackList: List.from(remoteFeedbackList),
+          idList: List.from(remoteIdList));
     } else if (event is UpdateList) {
-      yield MonitorState(idList: event.idList, userList: event.userList);
+      yield MonitorState(
+          idList: event.idList, feedbackList: event.feedbackList);
     }
   }
 

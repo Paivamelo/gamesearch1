@@ -5,15 +5,16 @@ import 'package:gamesearch1/logic/manage_db/manage_db_state.dart';
 import 'package:gamesearch1/logic/manage_db/manage_remote_db_bloc.dart';
 import 'package:gamesearch1/model/feedback.dart';
 
-class MainTela4 extends StatelessWidget {
+class MainTela4<T extends Bloc<ManageEvent, ManageState>>
+    extends StatelessWidget {
   final GlobalKey<FormState> formKey = new GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ManageRemoteBloc, ManageState>(
         builder: (context, state) {
-      User user;
-      user = new User();
+      UserFeedback feedback;
+      feedback = new UserFeedback();
 
       return Form(
           key: formKey,
@@ -29,15 +30,15 @@ class MainTela4 extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-                emailFormField(user),
+                assuntoFormField(feedback),
                 SizedBox(
                   height: 10,
                 ),
-                senhaFormField(user),
+                feedbackFormField(feedback),
                 SizedBox(
                   height: 50,
                 ),
-                submitButton(user, state, context),
+                submitButton(feedback, state, context),
               ])));
     });
   }
@@ -52,12 +53,12 @@ class MainTela4 extends StatelessWidget {
                 image: AssetImage('assets/images/feedback.png'))));
   }
 
-  Widget emailFormField(User user) {
+  Widget assuntoFormField(UserFeedback feedback) {
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(
         keyboardType: TextInputType.multiline,
-        initialValue: user.email,
+        initialValue: feedback.assunto,
         decoration: InputDecoration(
             labelText: "Assunto",
             labelStyle: TextStyle(
@@ -73,19 +74,19 @@ class MainTela4 extends StatelessWidget {
           return null;
         },
         onSaved: (value) {
-          user.email = value;
+          feedback.assunto = value;
         },
       ),
     );
   }
 
-  Widget senhaFormField(User user) {
+  Widget feedbackFormField(UserFeedback feedback) {
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: TextFormField(
         minLines: 4, //Normal textInputField will be displayed
         maxLines: 6,
-        initialValue: user.senha,
+        initialValue: feedback.feedbacktext,
         decoration: InputDecoration(
             alignLabelWithHint: true,
             labelText: "Escreva seu feedback",
@@ -102,13 +103,13 @@ class MainTela4 extends StatelessWidget {
           return null;
         },
         onSaved: (value) {
-          user.senha = value;
+          feedback.feedbacktext = value;
         },
       ),
     );
   }
 
-  Widget submitButton(User user, state, context) {
+  Widget submitButton(UserFeedback feedback, state, context) {
     return Container(
       height: 40,
       child: ElevatedButton(
@@ -126,7 +127,7 @@ class MainTela4 extends StatelessWidget {
             if (formKey.currentState.validate()) {
               formKey.currentState.save();
               BlocProvider.of<ManageRemoteBloc>(context)
-                  .add(SubmitEvent(user: user));
+                  .add(SubmitEvent(feedback: feedback));
             }
           }),
     );

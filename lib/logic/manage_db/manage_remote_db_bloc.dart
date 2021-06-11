@@ -8,11 +8,9 @@ class ManageRemoteBloc extends Bloc<ManageEvent, ManageState> {
 
   @override
   Stream<ManageState> mapEventToState(ManageEvent event) async* {
-    if (event is DeleteEvent) {
-      DatabaseRemoteServer.helper.deleteUser(event.userId);
-    } else if (event is SubmitEvent) {
+    if (event is SubmitEvent) {
       if (state is InsertState) {
-        DatabaseRemoteServer.helper.insertUser(event.user);
+        DatabaseRemoteServer.helper.insertFeedback(event.feedback);
       }
     }
   }

@@ -9,6 +9,6 @@ class DeleteEvent extends ManageEvent {
 }
 
 class SubmitEvent extends ManageEvent {
-  User user;
-  SubmitEvent({this.user});
+  UserFeedback feedback;
+  SubmitEvent({this.feedback});
 }

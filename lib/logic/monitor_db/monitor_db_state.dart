@@ -1,7 +1,7 @@
 import 'package:gamesearch1/model/feedback.dart';
 
 class MonitorState {
-  List<User> userList;
+  List<UserFeedback> feedbackList;
   List<int> idList;
-  MonitorState({this.userList, this.idList});
+  MonitorState({this.feedbackList, this.idList});
 }
