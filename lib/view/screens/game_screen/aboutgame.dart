@@ -149,7 +149,8 @@ class AboutGame extends StatelessWidget {
                   height: 5,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => launch(
+                      'https://store.steampowered.com/app/459820/Crush_Crush/'),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   ),
