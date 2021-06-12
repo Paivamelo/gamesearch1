@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AboutGame extends StatelessWidget {
+class AboutGame extends StatefulWidget {
   static const routeName = '/aboutgame';
 
+  @override
+  _AboutGameState createState() => _AboutGameState();
+}
+
+class _AboutGameState extends State<AboutGame> {
+  bool _hasBeenPressed = false;
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -25,6 +31,22 @@ class AboutGame extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
+            Container(
+                child: RaisedButton(
+              elevation: 0,
+              color: Colors.white,
+              child: new Icon(
+                Icons.favorite,
+                color: _hasBeenPressed ? Colors.red : Colors.grey,
+              ),
+              // 2
+              // 3
+              onPressed: () => {
+                setState(() {
+                  _hasBeenPressed = !_hasBeenPressed;
+                })
+              },
+            )),
             Center(
               child: Card(
                 elevation: 5,
@@ -124,8 +146,7 @@ class AboutGame extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 ElevatedButton(
-                  onPressed: () =>
-                      launch('https://www.youtube.com/watch?v=NSJ4cESNQfE'),
+                  onPressed: () => launch(routeArgs['trailer']),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   ),

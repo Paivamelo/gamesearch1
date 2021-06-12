@@ -7,6 +7,7 @@ class Game {
   final String description;
   final String year;
   final String trailer;
+ //bool hasBeenPressed = false;
 
   Game({
     this.id,
@@ -17,6 +18,7 @@ class Game {
     this.description,
     this.year,
     this.trailer,
+    //this.hasBeenPressed,
   });
 }
 
@@ -32,7 +34,7 @@ final gameList = [
         "\nOs tripulantes podem ganhar completando todas as tarefas ou descobrindo e votando no impostor fora do navio."
         "\nO Impostor pode usar sabotagem para causar o caos, facilitando as mortes e melhorando os álibis.",
     year: "Ano de Lançamento: 2018",
-    trailer: "youtube",
+    trailer: "https://www.youtube.com",
   ),
   Game(
       id: "2",
