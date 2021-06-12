@@ -33,8 +33,8 @@ class _AboutGameState extends State<AboutGame> {
           children: <Widget>[
             Container(
                 child: RaisedButton(
-              elevation: 0,
               color: Colors.white,
+              elevation: 0,
               child: new Icon(
                 Icons.favorite,
                 color: _hasBeenPressed ? Colors.red : Colors.grey,

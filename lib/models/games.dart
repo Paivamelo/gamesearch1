@@ -7,7 +7,6 @@ class Game {
   final String description;
   final String year;
   final String trailer;
- //bool hasBeenPressed = false;
 
   Game({
     this.id,
@@ -18,7 +17,6 @@ class Game {
     this.description,
     this.year,
     this.trailer,
-    //this.hasBeenPressed,
   });
 }
 
@@ -34,7 +32,7 @@ final gameList = [
         "\nOs tripulantes podem ganhar completando todas as tarefas ou descobrindo e votando no impostor fora do navio."
         "\nO Impostor pode usar sabotagem para causar o caos, facilitando as mortes e melhorando os álibis.",
     year: "Ano de Lançamento: 2018",
-    trailer: "https://www.youtube.com",
+    trailer: "https://www.youtube.com/watch?v=NSJ4cESNQfE",
   ),
   Game(
       id: "2",
@@ -46,7 +44,7 @@ final gameList = [
           "\nOs Bloons estão de volta e melhores que nunca! Prepare-se para um jogo de torres 3D massivo desenvolvido para dar horas e horas do melhor da estratégia."
           "\nPrepare sua defesa perfeita numa combinação de maravilhosas torres macaco, melhorias, heróis e habilidades ativáveis, e estoure até o último Bloon que venha em sua direção.",
       year: "Ano de Lançamento: 2018",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=dvcQY0v0Ow8"),
   Game(
       id: "3",
       title: "Counter-Strike:\nGlobal Offensive",
@@ -57,7 +55,7 @@ final gameList = [
           "Counter-Strike: Global Offensive (CS: GO) expandirá na jogabilidade de ação baseada em equipes na qual foi pioneiro quando foi lançado há 12 anos."
           "\nCS: GO contém novos mapas, personagens e armas, além de conter versões atualizadas de conteúdos do CS clássico (como de_dust2). Além disso, CS: GO introduzirá novos modos de jogo, criação de partidas (matchmaking), placares de líderes e mais.",
       year: "Ano de Lançamento: 2012",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=edYCtaNueQY"),
   Game(
       id: "4",
       title: "Dead by Daylight",
@@ -67,7 +65,7 @@ final gameList = [
       description:
           "Dead by Daylight é um jogo de terror multiplayer (4vs1) onde um jogador assume o papel do assassino selvagem e os outros quatro jogadores como sobreviventes, tentando escapar do assassino e evitar serem pegos e mortos.",
       year: "Ano de Lançamento: 2016",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=JGhIXLO3ul8"),
   Game(
       id: "5",
       title: "Fall Guys",
@@ -77,7 +75,7 @@ final gameList = [
       description:
           "Fall Guys é um party game para multijogador com até 60 jogadores online, em uma louca corrida free-for-all, com rounds e rounds cada vez mais caóticos até sobrar um único vencedor!",
       year: "Ano de Lançamento: 2020",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=Wj3dUvGLjNQ"),
   Game(
       id: "6",
       title: "It Takes Two",
@@ -89,7 +87,7 @@ final gameList = [
           "\nDomine habilidades de personagem únicas e interligadas em cada nível. Ajude e receba ajuda em obstáculos inesperados e momentos divertidos. Chute as caudas peludas de esquilos gângsteres, pilote um par de cuecas, banque o DJ em um clube noturno agitado e desça de trenó em um globo de neve mágico. Abrace uma história comovente e hilária em que a narrativa e o jogo tecem uma experiência metafórica única."
           "\nIt Takes Two é desenvolvido pelo premiado estúdio Hazelight, líder da indústria em jogos cooperativos. Eles estão prestes a levar você em uma viagem selvagem e maravilhosa, em que só uma coisa é certa: somos melhores juntos.",
       year: "Ano de Lançamento: 2021",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=ohClxMmNLQQ"),
   Game(
       id: "7",
       title: "Minecraft",
@@ -99,7 +97,7 @@ final gameList = [
       description:
           "Explore mundos infinitos e construa desde simples casas a grandiosos castelos. Jogue no modo criativo com recursos ilimitados ou minere fundo no mundo no modo sobrevivência, criando armas e armaduras para lutar contra criaturas perigosas. Crie, explore e sobreviva sozinho ou com amigos.",
       year: "Ano de Lançamento: 2011",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=MmB9b5njVbA"),
   Game(
       id: "8",
       title: "Outlast",
@@ -112,7 +110,7 @@ final gameList = [
           "\nSeguindo uma dica de uma fonte anônima, o jornalista independente Miles Upshur invade a instalação, e o que ele descobre caminha sobre uma linha terrível entre ciência e religião, natureza e algo totalmente diferente. Uma vez lá dentro, sua única esperança de escapar reside na terrível verdade no coração do Monte Massive."
           "\nOutlast é uma verdadeira experiência de survival horror que visa mostrar que os monstros mais terríveis de todos vêm da mente humana.",
       year: "Ano de Lançamento: 2013",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=uKA-IA4locM"),
   Game(
       id: "9",
       title: "Project Winter",
@@ -122,7 +120,7 @@ final gameList = [
       description:
           "O jogo perfeito para esfaquear seus amigos. Project Winter é um jogo multijogador para 8 pessoas com foco no engano social e na sobrevivência. A comunicação e o trabalho em equipe são essenciais para o objetivo final de fuga dos sobreviventes. Reúna recursos, conserte estruturas e enfrentem a selva juntos.",
       year: "Ano de Lançamento: 2019",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=kcX_clkApRo"),
   Game(
       id: "10",
       title: "Pummel Party",
@@ -132,7 +130,7 @@ final gameList = [
       description:
           "Pummel Party é um jogo de festa multijogador local e online para 4-8 jogadores. Golpeie amigos ou IA usando uma grande variedade de itens absurdos no modo de tabuleiro e compita para destruir amizades na coleção exclusiva de minijogos.",
       year: "Ano de Lançamento: 2018",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=oiYG0Ov5jKE"),
   Game(
       id: "11",
       title: "Raft",
@@ -142,7 +140,7 @@ final gameList = [
       description:
           "Raft lança você e seus amigos em uma aventura oceânica épica! Sozinhos ou juntos, os jogadores lutam para sobreviver a uma perigosa viagem através de um vasto mar! Reúna destroços, vasculhe recifes e construa sua própria casa flutuante, mas cuidado com os tubarões comedores de gente!",
       year: "Ano de Lançamento: 2018",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=__w615A5lC4"),
   Game(
       id: "12",
       title: "The Last of Us",
@@ -158,7 +156,7 @@ final gameList = [
           "\nPartida tensa e alucinante de ação e sobrevivência"
           "\nOs sistemas de partida novos e avançados atendem aos desafios de vida ou morte da jornada de Ellie por um mundo hostil. Vivencie sua batalha alucinante pela sobrevivência através de recursos aprimorados como combate corpo a corpo de alta intensidade, movimento fluido e ações furtivas dinâmicas. Uma ampla variedade de armas, itens de criação, habilidades e atualizações possibilitam que você personalize as habilidades de Ellie de acordo com seu estilo de jogo.",
       year: "Ano de Lançamento: 2020",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=kE7li_u1nmg"),
   Game(
       id: "13",
       title: "Tricky Towers",
@@ -171,7 +169,7 @@ final gameList = [
           "\nJogue com até 4 amigos no multijogador local, ou desafie jogadores em todo o mundo em uma batalha online. Treine suas habilidades com extensivos testes para um só jogador e crave recordes nos placares de líderes."
           "\nCom feitiços voando por todo lado e blocos desabando, Tricky Towers é certeza de viver a experiência da mais caótica diversão!",
       year: "Ano de Lançamento: 2016",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=Xn6ltQrKy5I"),
   Game(
       id: "14",
       title: "Ultimate Chicken Horse",
@@ -183,7 +181,7 @@ final gameList = [
           "\nDesejo concedido!"
           "\nO Ultimate Chicken Horse é um jogo de plataforma coletivo, no qual você e seus amigos criam a fase enquanto jogam, colocando armadilhas mortais antes de tentar chegar ao fim da fase. Se você conseguir, mas seus amigos não, você marca pontos! Jogue online ou localmente com seus companheiros animais e teste uma ampla variedade de plataformas em todos os tipos de lugares para encontrar novas formas de provocar seus amigos.",
       year: "Ano de Lançamento: 2016",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=FYaE_xw4krw"),
   Game(
       id: "15",
       title: "Valorant",
@@ -197,5 +195,5 @@ final gameList = [
           "\n\nBATALHE AO REDOR DO MUNDO"
           "\nCada mapa serve como um palco para mostrar sua criatividade. Os mapas são feitos sob medida para estratégias de equipe, jogadas espetaculares e momentos eletrizantes. Faça as jogadas que todo mundo vai tentar imitar no futuro!",
       year: "Ano de Lançamento: 2020",
-      trailer: "youtube"),
+      trailer: "https://www.youtube.com/watch?v=e_E9W2vsRbQ"),
 ];
