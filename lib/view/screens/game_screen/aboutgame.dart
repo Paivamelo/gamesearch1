@@ -31,29 +31,13 @@ class _AboutGameState extends State<AboutGame> {
         ),
         child: Column(
           children: <Widget>[
-            Container(
-                child: RaisedButton(
-              color: Colors.white,
-              elevation: 0,
-              child: new Icon(
-                Icons.favorite,
-                color: _hasBeenPressed ? Colors.red : Colors.grey,
-              ),
-              // 2
-              // 3
-              onPressed: () => {
-                setState(() {
-                  _hasBeenPressed = !_hasBeenPressed;
-                })
-              },
-            )),
             Center(
               child: Card(
                 elevation: 5,
                 child: Hero(
                   tag: id,
                   child: Container(
-                    height: 450,
+                    height: 500,
                     width: 300,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),

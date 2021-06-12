@@ -3,9 +3,16 @@ import 'package:flutter/material.dart';
 import '../models/games.dart';
 import '../view/screens/game_screen/aboutgame.dart';
 
-class GameList extends StatelessWidget {
+class GameList extends StatefulWidget {
   final int index;
   GameList(this.index);
+
+  @override
+  _GameListState createState() => _GameListState();
+}
+
+class _GameListState extends State<GameList> {
+  bool _hasBeenPressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +23,14 @@ class GameList extends StatelessWidget {
             Navigator.of(context).pushNamed(
               AboutGame.routeName,
               arguments: {
-                'id': gameList[index].id,
-                'title': gameList[index].title,
-                'genre': gameList[index].genre,
-                'image': gameList[index].image,
-                'dev': gameList[index].dev,
-                'description': gameList[index].description,
-                'year': gameList[index].year,
-                'trailer': gameList[index].trailer,
+                'id': gameList[widget.index].id,
+                'title': gameList[widget.index].title,
+                'genre': gameList[widget.index].genre,
+                'image': gameList[widget.index].image,
+                'dev': gameList[widget.index].dev,
+                'description': gameList[widget.index].description,
+                'year': gameList[widget.index].year,
+                'trailer': gameList[widget.index].trailer,
               },
             );
           },
@@ -32,7 +39,7 @@ class GameList extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Hero(
-                  tag: gameList[index].id,
+                  tag: gameList[widget.index].id,
                   child: Container(
                     height: 150,
                     width: 100,
@@ -44,7 +51,7 @@ class GameList extends StatelessWidget {
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(
-                          gameList[index].image,
+                          gameList[widget.index].image,
                         ),
                       ),
                     ),
@@ -59,7 +66,7 @@ class GameList extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.only(top: 15, left: 15),
                         child: Text(
-                          gameList[index].title,
+                          gameList[widget.index].title,
                           style: TextStyle(
                             fontSize: 30,
                             fontFamily: "Play",
@@ -73,13 +80,31 @@ class GameList extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 15),
                         width: 250,
                         child: Text(
-                          gameList[index].dev,
+                          gameList[widget.index].dev,
                           style: TextStyle(fontSize: 15),
                         ),
                       ),
                     ],
                   ),
                 ),
+                Container(
+                    width: 50,
+                    alignment: Alignment.topRight,
+                    child: RaisedButton(
+                      color: Colors.white,
+                      elevation: 0,
+                      child: new Icon(
+                        Icons.favorite,
+                        color: _hasBeenPressed ? Colors.red : Colors.grey,
+                      ),
+                      // 2
+                      // 3
+                      onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      },
+                    )),
               ],
             ),
           ),

@@ -172,7 +172,7 @@ final gameList = [
       trailer: "https://www.youtube.com/watch?v=Xn6ltQrKy5I"),
   Game(
       id: "14",
-      title: "Ultimate Chicken Horse",
+      title: "Ultimate Chicken\nHorse",
       genre: "Ação · Casual · Indie",
       image: "assets/images/ultimatechickenhorse.jpg",
       dev: "Clever Endeavour Games",
