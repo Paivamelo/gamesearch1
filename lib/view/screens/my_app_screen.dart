@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
                 icon: Icon(Icons.account_circle), label: "Usuário"),
             BottomNavigationBarItem(icon: Icon(Icons.games), label: "Jogos"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.new_releases), label: "Últimas Notícias"),
+                icon: Icon(Icons.new_releases), label: "Notícias"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.feedback), label: "Feedback"),
             BottomNavigationBarItem(
