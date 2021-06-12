@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:gamesearch1/model/feedback.dart';
+import 'package:gamesearch1/models/feedback.dart';
 import 'package:dio/dio.dart';
 import 'package:socket_io_client/socket_io_client.dart';
 

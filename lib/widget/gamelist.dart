@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/games.dart';
+import '../models/games.dart';
 import '../view/screens/game_screen/aboutgame.dart';
 
 class GameList extends StatelessWidget {

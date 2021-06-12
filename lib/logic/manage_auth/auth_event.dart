@@ -1,4 +1,4 @@
-import 'package:gamesearch1/model/user.dart';
+import 'package:gamesearch1/models/user.dart';
 
 abstract class AuthEvent {}
 

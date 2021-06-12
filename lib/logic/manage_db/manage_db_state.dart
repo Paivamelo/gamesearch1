@@ -1,4 +1,4 @@
-import 'package:gamesearch1/model/feedback.dart';
+import 'package:gamesearch1/models/feedback.dart';
 
 abstract class ManageState {}
 

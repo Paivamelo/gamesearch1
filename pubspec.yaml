@@ -39,6 +39,8 @@ dependencies:
   socket_io_client: ^1.0.1
   url_launcher: ^6.0.6
   video_player: ^2.1.6
+  http: ^0.13.3
+  youtube_player_flutter: ^8.0.0
 
 dev_dependencies:
   flutter_test:

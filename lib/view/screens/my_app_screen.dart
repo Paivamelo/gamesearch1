@@ -4,8 +4,9 @@ import 'package:gamesearch1/logic/manage_db/manage_remote_db_bloc.dart';
 import 'package:gamesearch1/logic/monitor_db/monitor_db_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gamesearch1/view/screens/feedback_screen/tela4_main.dart';
+import 'package:gamesearch1/view/screens/tela4_main.dart';
 import 'package:gamesearch1/view/screens/user_screen/tela1_main.dart';
+import 'package:gamesearch1/view/screens/video_screen/tela5_main.dart';
 
 import 'game_screen/tela2_main.dart';
 import 'news_screen/tela3_main.dart';
@@ -23,6 +24,7 @@ class _MyAppState extends State<MyApp> {
     MainTela2(),
     MainTela3(),
     MainTela4<ManageRemoteBloc>(),
+    MainTela5(),
   ];
 
   @override
@@ -42,7 +44,9 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.new_releases), label: "Últimas Notícias"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.feedback), label: "Feedback")
+                icon: Icon(Icons.feedback), label: "Feedback"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.video_collection_rounded), label: "Vídeos")
           ],
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.pink,

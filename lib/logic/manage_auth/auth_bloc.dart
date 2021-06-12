@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:gamesearch1/auth_provider/firebase_auth.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_event.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_state.dart';
-import 'package:gamesearch1/model/user.dart';
+import 'package:gamesearch1/models/user.dart';
 import 'package:bloc/bloc.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {

@@ -1,4 +1,4 @@
-import 'package:gamesearch1/model/user.dart';
+import 'package:gamesearch1/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseAuthenticationService {

@@ -4,7 +4,7 @@ import 'dart:async';
 import 'package:gamesearch1/data/webserver/remote_database.dart';
 import 'package:gamesearch1/logic/monitor_db/monitor_db_event.dart';
 import 'package:gamesearch1/logic/monitor_db/monitor_db_state.dart';
-import 'package:gamesearch1/model/feedback.dart';
+import 'package:gamesearch1/models/feedback.dart';
 import 'package:bloc/bloc.dart';
 
 class MonitorBloc extends Bloc<MonitorEvent, MonitorState> {
