@@ -7,33 +7,34 @@ class Game {
   final String description;
   final String year;
   final String trailer;
+  final String obter;
 
-  Game({
-    this.id,
-    this.title,
-    this.genre,
-    this.image,
-    this.dev,
-    this.description,
-    this.year,
-    this.trailer,
-  });
+  Game(
+      {this.id,
+      this.title,
+      this.genre,
+      this.image,
+      this.dev,
+      this.description,
+      this.year,
+      this.trailer,
+      this.obter});
 }
 
 final gameList = [
   Game(
-    id: "1",
-    title: "Among Us",
-    genre: "Estratégia · ‎Sobrevivência",
-    image: "assets/images/amongus.jpg",
-    dev: "InnerSloth",
-    description:
-        "Jogue on-line ou via Wi-Fi local com 4 a 10 jogadores enquanto tenta preparar sua nave espacial para a partida, mas tenha cuidado, pois um deles será um impostor disposto a matar todos!"
-        "\nOs tripulantes podem ganhar completando todas as tarefas ou descobrindo e votando no impostor fora do navio."
-        "\nO Impostor pode usar sabotagem para causar o caos, facilitando as mortes e melhorando os álibis.",
-    year: "Ano de Lançamento: 2018",
-    trailer: "https://www.youtube.com/watch?v=NSJ4cESNQfE",
-  ),
+      id: "1",
+      title: "Among Us",
+      genre: "Estratégia · ‎Sobrevivência",
+      image: "assets/images/amongus.jpg",
+      dev: "InnerSloth",
+      description:
+          "Jogue on-line ou via Wi-Fi local com 4 a 10 jogadores enquanto tenta preparar sua nave espacial para a partida, mas tenha cuidado, pois um deles será um impostor disposto a matar todos!"
+          "\nOs tripulantes podem ganhar completando todas as tarefas ou descobrindo e votando no impostor fora do navio."
+          "\nO Impostor pode usar sabotagem para causar o caos, facilitando as mortes e melhorando os álibis.",
+      year: "Ano de Lançamento: 2018",
+      trailer: "https://www.youtube.com/watch?v=NSJ4cESNQfE",
+      obter: "https://store.steampowered.com/app/945360/Among_Us/"),
   Game(
       id: "2",
       title: "Bloons TD 6",
@@ -44,7 +45,8 @@ final gameList = [
           "\nOs Bloons estão de volta e melhores que nunca! Prepare-se para um jogo de torres 3D massivo desenvolvido para dar horas e horas do melhor da estratégia."
           "\nPrepare sua defesa perfeita numa combinação de maravilhosas torres macaco, melhorias, heróis e habilidades ativáveis, e estoure até o último Bloon que venha em sua direção.",
       year: "Ano de Lançamento: 2018",
-      trailer: "https://www.youtube.com/watch?v=dvcQY0v0Ow8"),
+      trailer: "https://www.youtube.com/watch?v=dvcQY0v0Ow8",
+      obter: "https://store.steampowered.com/app/960090/Bloons_TD_6/"),
   Game(
       id: "3",
       title: "Counter-Strike:\nGlobal Offensive",
@@ -55,7 +57,9 @@ final gameList = [
           "Counter-Strike: Global Offensive (CS: GO) expandirá na jogabilidade de ação baseada em equipes na qual foi pioneiro quando foi lançado há 12 anos."
           "\nCS: GO contém novos mapas, personagens e armas, além de conter versões atualizadas de conteúdos do CS clássico (como de_dust2). Além disso, CS: GO introduzirá novos modos de jogo, criação de partidas (matchmaking), placares de líderes e mais.",
       year: "Ano de Lançamento: 2012",
-      trailer: "https://www.youtube.com/watch?v=edYCtaNueQY"),
+      trailer: "https://www.youtube.com/watch?v=edYCtaNueQY",
+      obter:
+          "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/"),
   Game(
       id: "4",
       title: "Dead by Daylight",
@@ -65,7 +69,8 @@ final gameList = [
       description:
           "Dead by Daylight é um jogo de terror multiplayer (4vs1) onde um jogador assume o papel do assassino selvagem e os outros quatro jogadores como sobreviventes, tentando escapar do assassino e evitar serem pegos e mortos.",
       year: "Ano de Lançamento: 2016",
-      trailer: "https://www.youtube.com/watch?v=JGhIXLO3ul8"),
+      trailer: "https://www.youtube.com/watch?v=JGhIXLO3ul8",
+      obter: "https://store.steampowered.com/app/381210/Dead_by_Daylight/"),
   Game(
       id: "5",
       title: "Fall Guys",
@@ -75,7 +80,9 @@ final gameList = [
       description:
           "Fall Guys é um party game para multijogador com até 60 jogadores online, em uma louca corrida free-for-all, com rounds e rounds cada vez mais caóticos até sobrar um único vencedor!",
       year: "Ano de Lançamento: 2020",
-      trailer: "https://www.youtube.com/watch?v=Wj3dUvGLjNQ"),
+      trailer: "https://www.youtube.com/watch?v=Wj3dUvGLjNQ",
+      obter:
+          "https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/"),
   Game(
       id: "6",
       title: "It Takes Two",
@@ -87,7 +94,8 @@ final gameList = [
           "\nDomine habilidades de personagem únicas e interligadas em cada nível. Ajude e receba ajuda em obstáculos inesperados e momentos divertidos. Chute as caudas peludas de esquilos gângsteres, pilote um par de cuecas, banque o DJ em um clube noturno agitado e desça de trenó em um globo de neve mágico. Abrace uma história comovente e hilária em que a narrativa e o jogo tecem uma experiência metafórica única."
           "\nIt Takes Two é desenvolvido pelo premiado estúdio Hazelight, líder da indústria em jogos cooperativos. Eles estão prestes a levar você em uma viagem selvagem e maravilhosa, em que só uma coisa é certa: somos melhores juntos.",
       year: "Ano de Lançamento: 2021",
-      trailer: "https://www.youtube.com/watch?v=ohClxMmNLQQ"),
+      trailer: "https://www.youtube.com/watch?v=ohClxMmNLQQ",
+      obter: "https://store.steampowered.com/app/1426210/It_Takes_Two/"),
   Game(
       id: "7",
       title: "Minecraft",
@@ -97,20 +105,22 @@ final gameList = [
       description:
           "Explore mundos infinitos e construa desde simples casas a grandiosos castelos. Jogue no modo criativo com recursos ilimitados ou minere fundo no mundo no modo sobrevivência, criando armas e armaduras para lutar contra criaturas perigosas. Crie, explore e sobreviva sozinho ou com amigos.",
       year: "Ano de Lançamento: 2011",
-      trailer: "https://www.youtube.com/watch?v=MmB9b5njVbA"),
+      trailer: "https://www.youtube.com/watch?v=MmB9b5njVbA",
+      obter: "https://www.minecraft.net/pt-pt/get-minecraft"),
   Game(
       id: "8",
-      title: "Outlast",
+      title: "Outlast 2",
       genre: "Survival Horror",
-      image: "assets/images/outlast.jpg",
+      image: "assets/images/outlast2.jpg",
       dev: "Red Barrels Studio",
       description:
-          "Inferno é um experimento ao qual você não pode sobreviver em Outlast, um jogo de survival horror em primeira pessoa desenvolvido por veteranos de algumas das maiores franquias de jogos da história. Como o jornalista investigativo Miles Upshur, explore Mount Massive Asylum e tente sobreviver o suficiente para descobrir seu terrível segredo ... se você ousar."
-          "\nNas montanhas remotas do Colorado, horrores aguardam dentro do Asilo Mount Massive. Um lar para doentes mentais abandonado há muito tempo, recentemente reaberto pelo ramo de “pesquisa e caridade” da transnacional Murkoff Corporation, o asilo tem operado em sigilo absoluto… até agora."
-          "\nSeguindo uma dica de uma fonte anônima, o jornalista independente Miles Upshur invade a instalação, e o que ele descobre caminha sobre uma linha terrível entre ciência e religião, natureza e algo totalmente diferente. Uma vez lá dentro, sua única esperança de escapar reside na terrível verdade no coração do Monte Massive."
-          "\nOutlast é uma verdadeira experiência de survival horror que visa mostrar que os monstros mais terríveis de todos vêm da mente humana.",
-      year: "Ano de Lançamento: 2013",
-      trailer: "https://www.youtube.com/watch?v=uKA-IA4locM"),
+          "Outlast 2 traz-te Sullivan Knoth e os seus seguidores, que abandonaram o nosso mundo cruel para fundar Temple Gate, uma cidade situada nas profundezas do deserto, longe da civilização. Knoth e o seu rebanho estão a preparar-se para as adversidades do fim dos tempos, e tu estás no centro do furacão."
+          "\nTu és Blake Langermann, um operador de câmara que trabalha com a sua esposa, Lynn. Sois ambos jornalistas de investigação, dispostos a correr riscos e ir até ao fundo para descobrir as histórias que mais ninguém se atreveria a investigar."
+          "\nEstais a seguir o rastro das pistas que tiveram origem no assassinato aparentemente impossível de uma mulher grávida, apenas conhecida como Jane Doe."
+          "\nA investigação conduziu-vos até ao centro do deserto do Arizona, a uma escuridão tão profunda que ninguém poderia lançar um fio de luz sobre ela, e a uma corrupção tão intensa que enlouquecer poderá ser a solução mais sensata.",
+      year: "Ano de Lançamento: 2017",
+      trailer: "https://www.youtube.com/watch?v=RTXbOh8urp4",
+      obter: "https://store.steampowered.com/app/414700/Outlast_2/"),
   Game(
       id: "9",
       title: "Project Winter",
@@ -120,7 +130,8 @@ final gameList = [
       description:
           "O jogo perfeito para esfaquear seus amigos. Project Winter é um jogo multijogador para 8 pessoas com foco no engano social e na sobrevivência. A comunicação e o trabalho em equipe são essenciais para o objetivo final de fuga dos sobreviventes. Reúna recursos, conserte estruturas e enfrentem a selva juntos.",
       year: "Ano de Lançamento: 2019",
-      trailer: "https://www.youtube.com/watch?v=kcX_clkApRo"),
+      trailer: "https://www.youtube.com/watch?v=kcX_clkApRo",
+      obter: "https://store.steampowered.com/app/774861/Project_Winter/"),
   Game(
       id: "10",
       title: "Pummel Party",
@@ -130,7 +141,8 @@ final gameList = [
       description:
           "Pummel Party é um jogo de festa multijogador local e online para 4-8 jogadores. Golpeie amigos ou IA usando uma grande variedade de itens absurdos no modo de tabuleiro e compita para destruir amizades na coleção exclusiva de minijogos.",
       year: "Ano de Lançamento: 2018",
-      trailer: "https://www.youtube.com/watch?v=oiYG0Ov5jKE"),
+      trailer: "https://www.youtube.com/watch?v=oiYG0Ov5jKE",
+      obter: "https://store.steampowered.com/app/880940/Pummel_Party/"),
   Game(
       id: "11",
       title: "Raft",
@@ -140,10 +152,11 @@ final gameList = [
       description:
           "Raft lança você e seus amigos em uma aventura oceânica épica! Sozinhos ou juntos, os jogadores lutam para sobreviver a uma perigosa viagem através de um vasto mar! Reúna destroços, vasculhe recifes e construa sua própria casa flutuante, mas cuidado com os tubarões comedores de gente!",
       year: "Ano de Lançamento: 2018",
-      trailer: "https://www.youtube.com/watch?v=__w615A5lC4"),
+      trailer: "https://www.youtube.com/watch?v=__w615A5lC4",
+      obter: "https://store.steampowered.com/app/648800/Raft/"),
   Game(
       id: "12",
-      title: "The Last of Us",
+      title: "The Last of Us Part II",
       genre: "Ação · Aventura",
       image: "assets/images/thelastofus.jfif",
       dev: "Naughty Dog",
@@ -156,7 +169,9 @@ final gameList = [
           "\nPartida tensa e alucinante de ação e sobrevivência"
           "\nOs sistemas de partida novos e avançados atendem aos desafios de vida ou morte da jornada de Ellie por um mundo hostil. Vivencie sua batalha alucinante pela sobrevivência através de recursos aprimorados como combate corpo a corpo de alta intensidade, movimento fluido e ações furtivas dinâmicas. Uma ampla variedade de armas, itens de criação, habilidades e atualizações possibilitam que você personalize as habilidades de Ellie de acordo com seu estilo de jogo.",
       year: "Ano de Lançamento: 2020",
-      trailer: "https://www.youtube.com/watch?v=kE7li_u1nmg"),
+      trailer: "https://www.youtube.com/watch?v=kE7li_u1nmg",
+      obter:
+          "https://store.playstation.com/pt-br/product/UP9000-CUSA07820_00-THELASTOFUSPART2"),
   Game(
       id: "13",
       title: "Tricky Towers",
@@ -169,10 +184,11 @@ final gameList = [
           "\nJogue com até 4 amigos no multijogador local, ou desafie jogadores em todo o mundo em uma batalha online. Treine suas habilidades com extensivos testes para um só jogador e crave recordes nos placares de líderes."
           "\nCom feitiços voando por todo lado e blocos desabando, Tricky Towers é certeza de viver a experiência da mais caótica diversão!",
       year: "Ano de Lançamento: 2016",
-      trailer: "https://www.youtube.com/watch?v=Xn6ltQrKy5I"),
+      trailer: "https://www.youtube.com/watch?v=Xn6ltQrKy5I",
+      obter: "https://store.steampowered.com/app/437920/Tricky_Towers/"),
   Game(
       id: "14",
-      title: "Ultimate Chicken\nHorse",
+      title: "Ultimate Chicken Horse",
       genre: "Ação · Casual · Indie",
       image: "assets/images/ultimatechickenhorse.jpg",
       dev: "Clever Endeavour Games",
@@ -181,7 +197,9 @@ final gameList = [
           "\nDesejo concedido!"
           "\nO Ultimate Chicken Horse é um jogo de plataforma coletivo, no qual você e seus amigos criam a fase enquanto jogam, colocando armadilhas mortais antes de tentar chegar ao fim da fase. Se você conseguir, mas seus amigos não, você marca pontos! Jogue online ou localmente com seus companheiros animais e teste uma ampla variedade de plataformas em todos os tipos de lugares para encontrar novas formas de provocar seus amigos.",
       year: "Ano de Lançamento: 2016",
-      trailer: "https://www.youtube.com/watch?v=FYaE_xw4krw"),
+      trailer: "https://www.youtube.com/watch?v=FYaE_xw4krw",
+      obter:
+          "https://store.steampowered.com/app/386940/Ultimate_Chicken_Horse/"),
   Game(
       id: "15",
       title: "Valorant",
@@ -195,5 +213,6 @@ final gameList = [
           "\n\nBATALHE AO REDOR DO MUNDO"
           "\nCada mapa serve como um palco para mostrar sua criatividade. Os mapas são feitos sob medida para estratégias de equipe, jogadas espetaculares e momentos eletrizantes. Faça as jogadas que todo mundo vai tentar imitar no futuro!",
       year: "Ano de Lançamento: 2020",
-      trailer: "https://www.youtube.com/watch?v=e_E9W2vsRbQ"),
+      trailer: "https://www.youtube.com/watch?v=e_E9W2vsRbQ",
+      obter: "https://playvalorant.com/pt-br/")
 ];

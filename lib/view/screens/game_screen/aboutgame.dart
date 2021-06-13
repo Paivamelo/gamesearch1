@@ -9,7 +9,6 @@ class AboutGame extends StatefulWidget {
 }
 
 class _AboutGameState extends State<AboutGame> {
-  bool _hasBeenPressed = false;
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -154,8 +153,7 @@ class _AboutGameState extends State<AboutGame> {
                   height: 5,
                 ),
                 ElevatedButton(
-                  onPressed: () => launch(
-                      'https://store.steampowered.com/app/459820/Crush_Crush/'),
+                  onPressed: () => launch(routeArgs['obter']),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   ),
