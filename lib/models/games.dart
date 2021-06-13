@@ -169,7 +169,7 @@ final gameList = [
           "\nPartida tensa e alucinante de ação e sobrevivência"
           "\nOs sistemas de partida novos e avançados atendem aos desafios de vida ou morte da jornada de Ellie por um mundo hostil. Vivencie sua batalha alucinante pela sobrevivência através de recursos aprimorados como combate corpo a corpo de alta intensidade, movimento fluido e ações furtivas dinâmicas. Uma ampla variedade de armas, itens de criação, habilidades e atualizações possibilitam que você personalize as habilidades de Ellie de acordo com seu estilo de jogo.",
       year: "Ano de Lançamento: 2020",
-      trailer: "https://www.youtube.com/watch?v=kE7li_u1nmg",
+      trailer: "https://www.youtube.com/watch?v=W2Wnvvj33Wo",
       obter:
           "https://store.playstation.com/pt-br/product/UP9000-CUSA07820_00-THELASTOFUSPART2"),
   Game(
