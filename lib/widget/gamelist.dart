@@ -31,6 +31,7 @@ class _GameListState extends State<GameList> {
                 'description': gameList[widget.index].description,
                 'year': gameList[widget.index].year,
                 'trailer': gameList[widget.index].trailer,
+                'obter': gameList[widget.index].obter,
               },
             );
           },

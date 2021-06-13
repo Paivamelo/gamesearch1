@@ -156,7 +156,7 @@ final gameList = [
       obter: "https://store.steampowered.com/app/648800/Raft/"),
   Game(
       id: "12",
-      title: "The Last of Us Part II",
+      title: "The Last of Us\nPart II",
       genre: "Ação · Aventura",
       image: "assets/images/thelastofus.jfif",
       dev: "Naughty Dog",
@@ -188,7 +188,7 @@ final gameList = [
       obter: "https://store.steampowered.com/app/437920/Tricky_Towers/"),
   Game(
       id: "14",
-      title: "Ultimate Chicken Horse",
+      title: "Ultimate Chicken\nHorse",
       genre: "Ação · Casual · Indie",
       image: "assets/images/ultimatechickenhorse.jpg",
       dev: "Clever Endeavour Games",
