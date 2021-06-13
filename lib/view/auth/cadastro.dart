@@ -62,6 +62,12 @@ class _SignupPageState extends State<SignupPage> {
                       /* onSaved: (String invalue) {
                         registerData.email = invalue;
                       },*/
+                      validator: (String inValue) {
+                        if (inValue.length == 0) {
+                          return "Digite o seu Nome";
+                        }
+                        return null;
+                      },
                     ),
                     SizedBox(
                       height: 10,
@@ -80,6 +86,12 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                       onSaved: (String invalue) {
                         registerData.email = invalue;
+                      },
+                      validator: (String inValue) {
+                        if (inValue.length == 0) {
+                          return "Digite o seu email";
+                        }
+                        return null;
                       },
                     ),
                     SizedBox(
@@ -100,6 +112,12 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                       onSaved: (String invalue) {
                         registerData.senha = invalue;
+                      },
+                      validator: (String inValue) {
+                        if (inValue.length == 0) {
+                          return "Digite a sua senha";
+                        }
+                        return null;
                       },
                     ),
                     SizedBox(
@@ -295,17 +313,6 @@ class _SignupPageState extends State<SignupPage> {
                               BlocProvider.of<AuthBloc>(context)
                                   .add(registerData);
                             }
-                            final snackBar = SnackBar(
-                              content: Text("Cadastro Realizado!"),
-                              action: SnackBarAction(
-                                label: 'Undo',
-                                onPressed: () {
-                                  // Some code to undo the change.
-                                },
-                              ),
-                            );
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
                           },
                         ),
                       ),
