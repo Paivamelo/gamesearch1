@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gamesearch1/view/screens/tela4_main.dart';
 
 class MainTela1 extends StatefulWidget {
   @override
@@ -158,24 +157,6 @@ class MainTela1State extends State<MainTela1> {
                                 }),
                           ],
                         ),
-                      ),
-                    ),
-                    Container(
-                      height: 40,
-                      alignment: Alignment.center,
-                      child: TextButton(
-                        //autofocus: true,
-                        child: Text(
-                          "Enviar Feedback",
-                          style: TextStyle(
-                            fontFamily: 'Gameover',
-                            fontSize: 50,
-                            color: Colors.black87,
-                          ),
-                        ),
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => MainTela4())),
                       ),
                     ),
                   ],
