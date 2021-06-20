@@ -4,7 +4,7 @@ import 'package:gamesearch1/view/screens/my_app_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'auth/authentication_screen.dart';
+import 'screens/auth_screen/authentication_screen.dart';
 
 class Wrapper extends StatelessWidget {
   @override

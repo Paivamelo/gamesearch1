@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_bloc.dart';
 import 'package:gamesearch1/logic/manage_auth/auth_event.dart';
-import 'package:gamesearch1/view/screens/resetpassword.dart';
+import 'package:gamesearch1/view/screens/auth_screen/resetpassword.dart';
 
 class TelaLogin extends StatefulWidget {
   @override

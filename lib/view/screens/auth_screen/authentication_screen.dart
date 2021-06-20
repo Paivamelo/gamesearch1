@@ -1,5 +1,5 @@
-import 'package:gamesearch1/view/auth/cadastro.dart';
-import 'package:gamesearch1/view/auth/login.dart';
+import 'package:gamesearch1/view/screens/auth_screen/cadastro.dart';
+import 'package:gamesearch1/view/screens/auth_screen/login.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationScreen extends StatefulWidget {

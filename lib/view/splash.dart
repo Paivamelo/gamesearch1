@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gamesearch1/view/auth/login.dart';
+import 'package:gamesearch1/view/screens/auth_screen/login.dart';
 
 class Splash extends StatefulWidget {
   @override

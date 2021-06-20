@@ -4,12 +4,12 @@ import 'package:gamesearch1/models/video_model.dart';
 import 'package:gamesearch1/services/api_service.dart';
 import 'package:gamesearch1/view/screens/video_screen/video_screen.dart';
 
-class MainTela5 extends StatefulWidget {
+class MAinTela4 extends StatefulWidget {
   @override
-  _MainTela5State createState() => _MainTela5State();
+  _MAinTela4State createState() => _MAinTela4State();
 }
 
-class _MainTela5State extends State<MainTela5> {
+class _MAinTela4State extends State<MAinTela4> {
   Channel _channel;
   bool _isLoading = false;
 

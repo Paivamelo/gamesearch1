@@ -5,7 +5,7 @@ import 'package:gamesearch1/logic/manage_db/manage_db_state.dart';
 import 'package:gamesearch1/logic/manage_db/manage_remote_db_bloc.dart';
 import 'package:gamesearch1/models/feedback.dart';
 
-class MainTela4<T extends Bloc<ManageEvent, ManageState>>
+class MainTela5<T extends Bloc<ManageEvent, ManageState>>
     extends StatelessWidget {
   final GlobalKey<FormState> formKey = new GlobalKey();
 
