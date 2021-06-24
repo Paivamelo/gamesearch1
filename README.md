@@ -1,16 +1,19 @@
-# gamesearch1
+# GameSearch
 
-A new Flutter project.
+Aplicativo GameSearch Desenvolvido para disciplina de Programação para Dispositivos Móveis
 
-## Getting Started
+| Tela Login | Tela Cadastro| Tela do Usuário |
+| --------------- | --------------- | --------------- |
+| <img src="https://user-images.githubusercontent.com/65935078/123182715-63bcc380-d466-11eb-9549-2b3ae336981b.png" width="400" height="600">| <img src ="https://user-images.githubusercontent.com/65935078/123183020-0412e800-d467-11eb-9d79-6a3e0a225612.png" width="400" height="600">| <img src="https://user-images.githubusercontent.com/65935078/123183288-a59a3980-d467-11eb-88da-f47f84044648.png" width="400" height="600">|
+| Tela dos Jogos | Tela Noticias| Tela dos Videos |
+|<img src="https://user-images.githubusercontent.com/65935078/123183774-a54e6e00-d468-11eb-8bee-a03e4a71ea50.png" width="400" height="600"> | <img src="https://user-images.githubusercontent.com/65935078/123183492-09246700-d468-11eb-9225-3efae3d2f8a0.png" width="400" height="600"> | <img src="https://user-images.githubusercontent.com/65935078/123184257-b21f9180-d469-11eb-9ff6-6b3b3813ba01.png" width="400" height="600"> |
+| Tela Feedback Sobre o APP | |  |
+|<img src="https://user-images.githubusercontent.com/65935078/123184338-dd09e580-d469-11eb-94d1-3b11b0dd7bcc.png" width="400" height="600"> | |   |
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+
